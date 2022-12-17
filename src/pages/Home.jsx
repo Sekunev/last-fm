@@ -21,7 +21,7 @@ const Home = () => {
       const {
         artists: { artist },
       } = data;
-      // console.log(artist);
+      console.log(artist);
       dispatch(fetchSuccess(artist));
     } catch (error) {
       console.log(error);

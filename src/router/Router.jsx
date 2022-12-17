@@ -14,7 +14,7 @@ const Router = () => {
         <Route path="/details" element={<Details />} /> */}
         {/* Relative */}
         <Route index path="/" element={<Home />} />
-        <Route path="details" element={<Details />} />
+        <Route path="details/:name" element={<Details />} />
       </Routes>
       <Footer />
     </BrowserRouter>
