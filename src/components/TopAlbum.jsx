@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopAlbum = ({ name, listeners, playcount, image, url }) => {
+const TopAlbum = ({ name, artist, playcount, image, url }) => {
   return (
     <div className="flex justify-center my-4 ">
       <div
@@ -9,23 +9,20 @@ const TopAlbum = ({ name, listeners, playcount, image, url }) => {
       >
         <img
           className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-          src={image?.[0]["#text"]}
+          src={image?.[3]["#text"]}
           alt=""
         />
         <div className="flex flex-col justify-between p-4 leading-normal">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Artist
+            {name}
           </h5>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {name}
+            {artist?.name}
           </p>
         </div>
         <div className="flex flex-col justify-between p-4 leading-normal">
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            listeners : {listeners}
-          </p>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            playcount : {playcount}
+            {playcount} : play
           </p>
         </div>
       </div>

@@ -1,13 +1,16 @@
 import "./App.css";
 import Router from "./router/Router";
 import { Provider } from "react-redux";
-import store from "./app/store";
+import store, { persistor } from "./app/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-grey-100 dark:bg-[#23242a]">
       <Provider store={store}>
-        <Router />
+        <PersistGate persistor={persistor}>
+          <Router />
+        </PersistGate>
       </Provider>
     </div>
   );
