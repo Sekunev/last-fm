@@ -4,7 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDarkMode } from "../features/fetchSlice";
 
 const Navbar = () => {
-  // const [darkMode, setDarkMode] = useState(true);
+  //? REDUX-PERSİST OLMADAN DARKMODU LOKAL-STROGEDA DEPOLAMAK VALUE'SİNİ KALICI HALE GETİRMEK İÇİN.
+  // const [darkMode, setDarkMode] = useState(
+  //   localStorage.getItem("color-theme") === "dark" ? true : false
+  // );
+
   const dispatch = useDispatch();
   const { darkMode } = useSelector((state) => state.lastfm);
 
