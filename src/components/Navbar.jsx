@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setDarkMode } from "../features/fetchSlice";
 
@@ -11,6 +10,8 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   const { darkMode } = useSelector((state) => state.lastfm);
+  const githubLink = "https://github.com/canocalir";
+  const linkedinLink = "https://linkedin.com/in/canberkocalir";
 
   darkMode
     ? localStorage.setItem("color-theme", "")
@@ -25,7 +26,6 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between p-2">
-      <Link to={"/"}>Go Home</Link>
       <button
         type="button"
         title="Toggle dark/light mode"

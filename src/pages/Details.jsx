@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import TopAlbum from "../components/TopAlbum";
 import TopTrack from "../components/TopTrack";
 
@@ -35,29 +35,44 @@ const Details = () => {
     // eslint-disable-next-line
   }, []);
 
-  console.log(topAlbumList);
+  // console.log(topAlbumList);
+  // console.log(topTrackList);
 
   return (
-    <div className="flex-col">
-      <div className="flex justify-center">
-        <img src={image?.[0]["#text"]} alt="" />
-        <h1>{name}</h1>
-      </div>
-      <div className="flex justfy-center">
-        <div>
-          <h2>Top Albums</h2>
-          {topAlbumList["topalbums"]?.album.map((items, i) => {
-            return <TopAlbum key={i} {...items} />;
-          })}
+    <>
+      <Link
+        className="mb-2 text-left text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        to={"/"}
+      >
+        Go Home
+      </Link>
+      <div className="flex-col">
+        <div className="flex justify-center gap-2">
+          <img src={image?.[0]["#text"]} alt="" />
+          <h1 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {name}
+          </h1>
         </div>
-        <div>
-          <h2>Top Tracks</h2>
-          {topTrackList["toptracks"]?.track.map((items, i) => {
-            return <TopTrack key={i} {...items} />;
-          })}
+        <div className="flex justify-center gap-3">
+          <div>
+            <h2 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Top Albums
+            </h2>
+            {topAlbumList["topalbums"]?.album.map((items, i) => {
+              return <TopAlbum key={i} {...items} />;
+            })}
+          </div>
+          <div>
+            <h2 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Top Tracks
+            </h2>
+            {topTrackList["toptracks"]?.track.map((items, i) => {
+              return <TopTrack key={i} {...items} />;
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
