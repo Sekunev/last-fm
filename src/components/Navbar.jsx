@@ -10,8 +10,6 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   const { darkMode } = useSelector((state) => state.lastfm);
-  const githubLink = "https://github.com/canocalir";
-  const linkedinLink = "https://linkedin.com/in/canberkocalir";
 
   darkMode
     ? localStorage.setItem("color-theme", "")
