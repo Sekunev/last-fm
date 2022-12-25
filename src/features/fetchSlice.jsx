@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//! STATE'LER VE BAŞLANGIÇ DEĞERLERİ
 const initialState = {
   error: false,
   darkMode: true,
 };
 
+//! SLİCE 3 DEĞER BEKLER. AŞAĞIDA. REDUCER'DE DISPATCH İLE ÇALIŞTIRLACAK METODLARI TANIMLADIK.
 const fetchSlice = createSlice({
   name: "lastfm",
   initialState,

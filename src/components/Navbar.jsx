@@ -9,6 +9,9 @@ const Navbar = () => {
   // );
 
   const dispatch = useDispatch();
+
+  //! darkMode state'ini redux'dan çekiyoruz.CONSUMİNG. Bunun için useSelector Hook'unu kullanıyoruz.
+
   const { darkMode } = useSelector((state) => state.lastfm);
 
   darkMode

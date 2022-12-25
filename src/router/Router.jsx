@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Details from "../pages/Details";
 import Home from "../pages/Home";
@@ -16,7 +15,6 @@ const Router = () => {
         <Route index path="/" element={<Home />} />
         <Route path="details/:name" element={<Details />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 };

@@ -6,8 +6,8 @@ import { fetchError } from "../features/fetchSlice";
 import loadingg from "../assest/loading.gif";
 
 const Home = () => {
-  const [pageParam, setPageParam] = useState(1);
-  const [artistState, setArtistState] = useState([]);
+  const [pageParam, setPageParam] = useState(1); //! APIDE IHTIYACIMIZ OLAN SAYFA STATE'I
+  const [artistState, setArtistState] = useState([]); //! APIDEN ÇEKTİĞİMİZ DATAYI DEPOLADIĞIMIZ STATE
   const [loading, setLoading] = useState(true);
 
   const dispatch = useDispatch();
@@ -45,6 +45,7 @@ const Home = () => {
       dispatch(fetchError());
     }
   };
+  //! İNFİNITIV SCROLL IÇIN FONK
   const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop + 1 >=
@@ -84,7 +85,6 @@ const Home = () => {
       {artistState?.map((item, index) => (
         <ArtistCard key={index} {...item} />
       ))}
-      {loading && <h2>loading</h2>}
     </div>
   );
 };

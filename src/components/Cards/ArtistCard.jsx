@@ -7,11 +7,12 @@ const ArtistCard = ({ image, name, listeners, playcount }) => {
   return (
     <div className="flex justify-center my-4 ">
       <div
+        //! USENAVİGATE İLE ONCLİCK OLDUĞUNDA SEÇİLİ CARD'IN DETAY SAYFASI İÇİN ENDPOİNT VE DETAİL SAYFASINDA İHTAYACIMIZ OLAN IMAGE STATE'INI GÖNDERIYORUZ.
         onClick={() => navigate(`details/${name}`, { state: image })}
-        className="movie flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="movie flex items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <img
-          className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+          className="object-cover rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
           src={image?.[1]["#text"]}
           alt=""
         />

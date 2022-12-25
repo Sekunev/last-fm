@@ -12,7 +12,7 @@ import {
   REGISTER,
 } from "redux-persist";
 
-// persist kütüphanesi state'lerin kalıcı bir hafızada saklanmasını sağlıyor. Redux ile birlikte kullanılıyor. Bu bize örneğin sayfa yenilendiğinde state'lerin silinmemesini ve tekrar login olma gererkliliğini ortadan kaldırıyor.
+//? persist kütüphanesi state'lerin kalıcı bir hafızada saklanmasını sağlıyor. Redux ile birlikte kullanılıyor. Bu bize örneğin sayfa yenilendiğinde state'lerin silinmemesini ve tekrar login olma gererkliliğini ortadan kaldırıyor.
 
 // adres(https://www.npmjs.com/package/redux-persist/v/6.0.0)
 
