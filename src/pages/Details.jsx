@@ -77,9 +77,9 @@ const Details = () => {
                 <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Top Albums
                 </h2>
-                {topAlbumList["topalbums"]?.album.map((items, i) => {
+                {/* {topAlbumList["topalbums"]?.album.map((items, i) => {
                   return <TopAlbum key={i} {...items} />;
-                })}
+                })} */}
               </div>
               <div>
                 <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
