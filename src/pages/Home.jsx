@@ -79,9 +79,11 @@ const Home = () => {
           }}
         />
       )}
-      <h1 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Artist List
-      </h1>
+      {!loading && (
+        <h1 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Artist List
+        </h1>
+      )}
       {artistState?.map((item, index) => (
         <ArtistCard key={index} {...item} />
       ))}

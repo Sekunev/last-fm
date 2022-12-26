@@ -53,22 +53,24 @@ const Details = () => {
       )}
       {!loading && (
         <>
-          <Link
-            className="mb-2 text-left text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            to={"/"}
-          >
-            Go Home
-          </Link>
+          <div className="static first-line:text-end mr-3 ">
+            <Link
+              className="absolute right-3 top-3 border-b-2 border-red-500 font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-slate-500 hover:text-red-600 dark:text-white"
+              to={"/"}
+            >
+              Go Home
+            </Link>
+          </div>
           <div className="flex-col">
             <div className="flex justify-center gap-2">
               <img src={image?.[0]["#text"]} alt="" />
-              <h1 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h1 className="font-black text-2xl mb-3 text-2xl font-bold tracking-tight text-red-900 dark:text-white">
                 {name}
               </h1>
             </div>
             <div className="flex justify-center flex-col gap-3 sm:flex-row">
               <div>
-                <h2 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Top Albums
                 </h2>
                 {topAlbumList["topalbums"]?.album.map((items, i) => {
@@ -76,7 +78,7 @@ const Details = () => {
                 })}
               </div>
               <div>
-                <h2 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Top Tracks
                 </h2>
                 {topTrackList["toptracks"]?.track.map((items, i) => {

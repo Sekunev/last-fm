@@ -1,5 +1,6 @@
 body {
   background-image: linear-gradient(to top, #e09f13 0%, #dfcdcd 100%);
+  min-height: 100vh;
 }
 .App {
   text-align: center;
