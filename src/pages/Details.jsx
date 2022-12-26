@@ -16,7 +16,7 @@ const Details = () => {
   const API_KEY = process.env.REACT_APP_apiKey;
 
   const topAlbumsUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${name}&api_key=${API_KEY}&format=json`;
-  const topTracksUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name}&api_key=${API_KEY}&format=json`;
+  const topTracksUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name}&api_key=${API_KEY}&format=json`;
 
   // const gettopTrack = async () => {
   //   try {
@@ -39,10 +39,9 @@ const Details = () => {
       .then((res) => setTopAlbumList(res.data))
       .catch((err) => console.log(err));
     setLoading(false);
-    // gettopTrack();
     // eslint-disable-next-line
   }, []);
-
+  console.log(topTrackList);
   return (
     <>
       {loading && (
@@ -77,9 +76,9 @@ const Details = () => {
                 <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Top Albums
                 </h2>
-                {/* {topAlbumList["topalbums"]?.album.map((items, i) => {
+                {topAlbumList["topalbums"]?.album.map((items, i) => {
                   return <TopAlbum key={i} {...items} />;
-                })} */}
+                })}
               </div>
               <div>
                 <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -88,9 +87,6 @@ const Details = () => {
                 {topTrackList["toptracks"]?.track.map((items, i) => {
                   return <TopTrack key={i} {...items} />;
                 })}
-                {/* {topAlbumList["topalbums"]?.album.map((items, i) => {
-                  return <TopAlbum key={i} {...items} />;
-                })} */}
               </div>
             </div>
           </div>
