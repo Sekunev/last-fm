@@ -8,7 +8,7 @@ Project aims to create a Last Fm App.
 
 ### Visualization of the Website
 
-![image](https://github.com/Sekunev/Stock-App/blob/main/src/assets/AnimationProject.gif)
+![image](https://github.com/Sekunev/last-fm/blob/main/src/assest/AnimationProject.gif)
 
 ## Project Skeleton
 
