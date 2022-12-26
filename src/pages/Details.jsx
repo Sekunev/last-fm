@@ -31,13 +31,12 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get(topAlbumsUrl)
-      .then((res) => setTopAlbumList(res.data))
-      .catch((err) => console.log(err));
-
-    axios
       .get(topTracksUrl)
       .then((res) => setTopTrackList(res.data))
+      .catch((err) => console.log(err));
+    axios
+      .get(topAlbumsUrl)
+      .then((res) => setTopAlbumList(res.data))
       .catch((err) => console.log(err));
     setLoading(false);
     // gettopTrack();
