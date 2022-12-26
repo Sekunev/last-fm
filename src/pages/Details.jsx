@@ -85,8 +85,11 @@ const Details = () => {
                 <h2 className="font-black border-b-2 border-red-500 text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Top Tracks
                 </h2>
-                {topTrackList["toptracks"]?.track.map((items, i) => {
+                {/* {topTrackList["toptracks"]?.track.map((items, i) => {
                   return <TopTrack key={i} {...items} />;
+                })} */}
+                {topAlbumList["topalbums"]?.album.map((items, i) => {
+                  return <TopAlbum key={i} {...items} />;
                 })}
               </div>
             </div>
