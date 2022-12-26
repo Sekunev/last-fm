@@ -18,16 +18,16 @@ const Details = () => {
   const topAlbumsUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${name}&api_key=${API_KEY}&format=json`;
   const topTracksUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name}&api_key=${API_KEY}&format=json`;
 
-  const gettopTrack = async () => {
-    try {
-      const { data } = await axios.get(topTracksUrl);
-      setTopTrackList(data);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  };
+  // const gettopTrack = async () => {
+  //   try {
+  //     const { data } = await axios.get(topTracksUrl);
+  //     setTopTrackList(data);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     console.log(error);
+  //     setLoading(false);
+  //   }
+  // };
 
   useEffect(() => {
     axios
@@ -35,7 +35,12 @@ const Details = () => {
       .then((res) => setTopAlbumList(res.data))
       .catch((err) => console.log(err));
 
-    gettopTrack();
+    axios
+      .get(topTracksUrl)
+      .then((res) => setTopTrackList(res.data))
+      .catch((err) => console.log(err));
+    setLoading(false);
+    // gettopTrack();
     // eslint-disable-next-line
   }, []);
 
