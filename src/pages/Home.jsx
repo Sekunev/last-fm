@@ -80,7 +80,7 @@ const Home = () => {
         />
       )}
       {!loading && (
-        <h1 className="font-black text-2xl mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h1 className="font-black text-2xl mb-2 tracking-tight text-gray-900 dark:text-white">
           Artist List
         </h1>
       )}
